@@ -52,7 +52,10 @@ Resources:
         Variables:
           REGISTRY_STORAGE_S3_REGION: !Ref AWS::Region
           REGISTRY_STORAGE_S3_BUCKET: !Ref Bucket
+          REGISTRY_STORAGE_TAG_CONCURRENCYLIMIT: "8"
           REGISTRY_STORAGE_MAINTENANCE_READONLY: '{"enabled":true}'
+          REGISTRY_AUTH_HTPASSWD_REALM: basic-realm
+          REGISTRY_AUTH_HTPASSWD_PATH: /etc/distribution/.htpasswd
           AWS_LWA_REMOVE_BASE_PATH: /Prod
       Events:
         ProxyApi:

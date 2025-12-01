@@ -23,7 +23,6 @@ Push an example image via the local server:
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 aws configure export-credentials --format env-no-export > local.env
 docker compose up -d
-docker login localhost:5000 -u <username> -p <password>
 docker pull alpine
 docker tag alpine localhost:5000/alpine
 docker push localhost:5000/alpine

@@ -6,7 +6,6 @@ services:
       - "5000:5000"
     volumes:
       - ./config.yml:/etc/distribution/config.yml:ro
-      - ./.htpasswd:/etc/distribution/.htpasswd:ro
     environment:
       REGISTRY_STORAGE_S3_REGION: ap-northeast-1
       REGISTRY_STORAGE_S3_BUCKET: distribution-registry-${AWS_ACCOUNT_ID}

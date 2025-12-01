@@ -1,20 +1,8 @@
 version: 0.1
-log:
-  level: debug
 storage:
   s3:
-    region: ap-northeast-1                     # overwritten by the environment variable
-    bucket: distribution-registry-123456789012 # overwritten by the environment variable
-    loglevel: debug
-  tag:
-    concurrencylimit: 8
-  maintenance:
-    readonly:
-      enabled: false # overwritten by the environment variable
-auth:
-  htpasswd:
-    realm: basic-realm
-    path: /etc/distribution/.htpasswd
+    region: ap-northeast-1
+    bucket: distribution-registry-123456789012
 http:
   addr: :5000
   debug:
