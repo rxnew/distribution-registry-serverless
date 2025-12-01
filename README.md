@@ -33,7 +33,7 @@ docker compose up -d
 docker pull alpine
 docker tag alpine localhost:5000/alpine
 docker push localhost:5000/alpine
-docker compose down
+docker compose down -v
 ```
 
 Pull the example image from the serverless endpoint:
