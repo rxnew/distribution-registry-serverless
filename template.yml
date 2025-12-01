@@ -93,3 +93,5 @@ Resources:
 Outputs:
   Server:
     Value: !GetAtt Distribution.DomainName
+  Bucket:
+    Value: !Ref Bucket
