@@ -1,7 +1,7 @@
 version: 0.1
 storage:
   s3:
-    region: ap-northeast-1
+    region: us-east-1
     bucket: distribution-registry-123456789012
 http:
   addr: :5000

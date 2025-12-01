@@ -27,6 +27,7 @@ sam deploy
 Push an example image via the local server:
 
 ```shell
+export AWS_REGION=$(aws configure get region)
 export AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query "Account" --output text)
 aws configure export-credentials --format env-no-export > local.env
 docker compose up -d

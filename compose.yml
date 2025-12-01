@@ -7,7 +7,7 @@ services:
     volumes:
       - ./config.yml:/etc/distribution/config.yml:ro
     environment:
-      REGISTRY_STORAGE_S3_REGION: ap-northeast-1
+      REGISTRY_STORAGE_S3_REGION: ${AWS_REGION}
       REGISTRY_STORAGE_S3_BUCKET: distribution-registry-${AWS_ACCOUNT_ID}
     env_file:
       - local.env
