@@ -9,5 +9,6 @@ services:
     environment:
       REGISTRY_STORAGE_S3_REGION: ${AWS_REGION}
       REGISTRY_STORAGE_S3_BUCKET: distribution-registry-${AWS_ACCOUNT_ID}
+      REGISTRY_STORAGE_DELETE_ENABLED: "true"
     env_file:
       - local.env
